@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, #ff4d6d33, transparent 35%),
+    radial-gradient(circle at top right, #7c3aed44, transparent 35%),
+    linear-gradient(135deg, #080812, #111827);
+  color: #f8fafc;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  padding: 22px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 22px;
+  margin-bottom: 16px;
+  border: 1px solid #ffffff18;
+  border-radius: 22px;
+  background: #ffffff10;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 60px #00000055;
+}
+
+h1 {
+  margin: 0;
+  font-size: 26px;
+  letter-spacing: -0.04em;
+}
+
+h1::after {
+  content: "  protected local viewer";
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #94a3b8;
+  letter-spacing: 0;
+}
+
+button {
+  border: 0;
+  border-radius: 14px;
+  padding: 10px 15px;
+  color: white;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ff4d6d, #7c3aed);
+  box-shadow: 0 10px 25px #7c3aed55;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 35px #ff4d6d55;
+}
+
+button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  background: #334155;
+  box-shadow: none;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ffffff14;
+  border-radius: 18px;
+  background: #02061788;
+  backdrop-filter: blur(16px);
+}
+
+.toolbar span {
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: #ffffff12;
+  color: #cbd5e1;
+  font-weight: 700;
+}
+
+.status {
+  display: grid;
+  gap: 4px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  border: 1px solid #22c55e33;
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, #22c55e16, transparent),
+    #020617aa;
+  backdrop-filter: blur(16px);
+  overflow-wrap: anywhere;
+}
+
+.status p {
+  margin: 4px 0;
+  color: #cbd5e1;
+  font-size: 13px;
+}
+
+.status p:first-child {
+  color: #86efac;
+  font-weight: 800;
+}
+
+.viewer {
+  height: 72vh;
+  padding: 28px;
+  overflow: auto;
+  border: 1px solid #ffffff14;
+  border-radius: 26px;
+  background:
+    linear-gradient(135deg, #ffffff10, transparent),
+    #020617cc;
+  backdrop-filter: blur(22px);
+  box-shadow: inset 0 1px 0 #ffffff18, 0 25px 80px #00000066;
+}
+
+canvas {
+  display: block;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 30px 80px #00000088;
+}
